@@ -66,6 +66,18 @@
       indicators[currentSlide].classList.add('active');
       indicators[currentSlide].setAttribute('aria-selected', 'true');
       
+      // Update hero text if available
+      const currentSlideData = data.heroSlides[currentSlide];
+      const heroTitle = document.getElementById('hero-title');
+      const heroSubtitle = document.getElementById('hero-subtitle');
+      
+      if (heroTitle && currentSlideData.title) {
+        heroTitle.textContent = currentSlideData.title;
+      }
+      if (heroSubtitle && currentSlideData.subtitle) {
+        heroSubtitle.textContent = currentSlideData.subtitle;
+      }
+      
       // Reset autoplay
       resetAutoplay();
     }

@@ -19,15 +19,21 @@
   "heroSlides": [
     {
       "src": "assets/img/hero1.jpg",
-      "alt": "Ubicación Central"
+      "alt": "Ubicación Central",
+      "title": "Ubicación Privilegiada",
+      "subtitle": "En el corazón de Las Condes"
     },
     {
       "src": "assets/img/hero2.jpg",
-      "alt": "Barrilo amigable"
+      "alt": "Barrilo amigable",
+      "title": "Ambiente Acogedor",
+      "subtitle": "Tu segunda casa en Santiago"
     },
     {
       "src": "assets/img/hero3.jpg",
-      "alt": "Terraza y locación acomodada"
+      "alt": "Terraza y locación acomodada",
+      "title": "Espacios Modernos",
+      "subtitle": "Comodidad y estilo para tu estadía"
     }
   ],
   "sections": {

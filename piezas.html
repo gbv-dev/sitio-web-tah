@@ -39,7 +39,7 @@
 
   <!-- Rooms Grid Section -->
   <section class="container mx-auto px-4 py-16">
-    <div id="rooms-grid" class="grid md:grid-cols-2 gap-8">
+    <div id="rooms-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Rooms will be injected by JavaScript -->
     </div>
   </section>
@@ -145,11 +145,7 @@
                 </ul>
               </div>
               
-              <div class="flex items-center justify-between border-t pt-4">
-                <div>
-                  <span class="text-gray-600 text-sm">Desde</span>
-                  <p class="text-2xl font-bold text-black">${room.priceFrom}</p>
-                </div>
+              <div class="flex items-center justify-end border-t pt-4">
                 <a href="${room.cta}" class="bg-black hover:bg-gray-800 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
                   Reservar
                 </a>

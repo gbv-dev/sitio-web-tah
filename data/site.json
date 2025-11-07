@@ -117,6 +117,29 @@
           "alt": "Dormitorio doble 2"
         }
       ]
+    },
+    {
+      "name": "Suite Ejecutiva",
+      "shortDescription": "Espaciosa y elegante, ideal para estancias prolongadas.",
+      "features": ["Baño privado", "Cocina equipada", "Smart TV", "Escritorio"],
+      "capacity": 3,
+      "bedSetup": "1 cama queen + sofá cama",
+      "priceFrom": "$95.000 / noche",
+      "cta": "mailto:reservas@costaazul.cl",
+      "cover": {
+        "src": "assets/img/matrimonial-cover.svg",
+        "alt": "Suite ejecutiva"
+      },
+      "gallery": [
+        {
+          "src": "assets/img/matrimonial1.svg",
+          "alt": "Suite ejecutiva 1"
+        },
+        {
+          "src": "assets/img/matrimonial2.svg",
+          "alt": "Suite ejecutiva 2"
+        }
+      ]
     }
   ]
 }

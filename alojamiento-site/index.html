@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descansa con vista al mar, cerca de todo.">
+  <title>Alojamiento Costa Azul — Frente al mar</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-gray-50">
+  
+  <!-- Header will be injected here -->
+  <div id="header-container"></div>
+
+  <!-- Hero Slider Section -->
+  <section class="relative h-[70vh] overflow-hidden" aria-label="Carrusel de imágenes destacadas">
+    <div id="hero-slider" class="relative h-full">
+      <!-- Slides will be injected by JavaScript -->
+    </div>
+
+    <!-- Slider Controls -->
+    <button id="prev-slide" 
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all z-20 focus:outline-none focus:ring-2 focus:ring-black"
+            aria-label="Imagen anterior">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <button id="next-slide"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all z-20 focus:outline-none focus:ring-2 focus:ring-black"
+            aria-label="Siguiente imagen">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+
+    <!-- Slider Indicators -->
+    <div id="slider-indicators" 
+         class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3 z-20"
+         role="tablist"
+         aria-label="Seleccionar imagen del carrusel">
+      <!-- Indicators will be injected by JavaScript -->
+    </div>
+
+    <!-- Overlay Text -->
+    <div class="absolute inset-0 flex items-center justify-center z-10 bg-black/30">
+      <div class="text-center text-white px-4">
+        <img src="assets/img/logo.png" alt="Andes Suite Logo" class="h-24 md:h-28 w-auto mx-auto mb-6 drop-shadow-lg">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg" id="hero-title">Bienvenido</h1>
+        <p class="text-xl md:text-2xl mb-8 drop-shadow-lg">A hogar lejos de casa</p>
+        <a href="#contacto" class="bg-white hover:bg-black hover:text-white text-black px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 inline-block shadow-lg hover:shadow-2xl hover:scale-105">
+          Contactar Ahora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modules Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="space-y-16">
+
+      <!-- Location Module -->
+      <div class="grid md:grid-cols-2 gap-8 items-center" id="location-module">
+        <div class="order-2 md:order-1">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4" id="location-title">Locación</h2>
+          <p class="text-gray-600 text-lg leading-relaxed" id="location-text">
+            A pasos de la playa, con acceso a transporte y panoramas.
+          </p>
+        </div>
+        <div class="order-1 md:order-2 relative">
+          <div id="location-carousel" class="relative h-80 overflow-hidden rounded-lg shadow-lg">
+            <!-- Images will be injected by JavaScript -->
+          </div>
+          <button class="module-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center shadow transition-all z-10" data-module="location">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button class="module-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center shadow transition-all z-10" data-module="location">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          <div class="module-indicators absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-10" id="location-indicators"></div>
+        </div>
+      </div>
+
+      <!-- Separator -->
+      <hr class="border-t-2 border-gray-200 my-16">
+
+      <!-- Amenities Module -->
+      <div class="grid md:grid-cols-2 gap-8 items-center" id="amenities-module">
+        <div class="relative">
+          <div id="amenities-carousel" class="relative h-80 overflow-hidden rounded-lg shadow-lg">
+            <!-- Images will be injected by JavaScript -->
+          </div>
+          <button class="module-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center shadow transition-all z-10" data-module="amenities">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button class="module-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center shadow transition-all z-10" data-module="amenities">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          <div class="module-indicators absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-10" id="amenities-indicators"></div>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-4" id="amenities-title">Amenidades</h2>
+          <p class="text-gray-600 text-lg leading-relaxed" id="amenities-text">
+            Wi-Fi rápido, estacionamiento, áreas comunes y desayuno opcional.
+          </p>
+        </div>
+      </div>
+
+      <!-- Separator -->
+      <hr class="border-t-2 border-gray-200 my-16">
+
+      <!-- Around Module -->
+      <div class="grid md:grid-cols-2 gap-8 items-center" id="around-module">
+        <div class="order-2 md:order-1">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4" id="around-title">Alrededores</h2>
+          <p class="text-gray-600 text-lg leading-relaxed" id="around-text">
+            Restaurantes, cafés, miradores y vida nocturna a minutos.
+          </p>
+        </div>
+        <div class="order-1 md:order-2 relative">
+          <div id="around-carousel" class="relative h-80 overflow-hidden rounded-lg shadow-lg">
+            <!-- Images will be injected by JavaScript -->
+          </div>
+          <button class="module-prev absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center shadow transition-all z-10" data-module="around">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button class="module-next absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center shadow transition-all z-10" data-module="around">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          <div class="module-indicators absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-10" id="around-indicators"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="bg-black text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para tu próxima aventura?</h2>
+      <p class="text-xl mb-8">Conoce nuestras piezas disponibles y encuentra la perfecta para ti</p>
+      <a href="piezas.html" class="bg-white text-black hover:bg-gray-300 hover:shadow-2xl hover:scale-105 px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 inline-block">
+        Ver Piezas Disponibles
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer will be injected here -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/header-footer.js"></script>
+  <script src="assets/js/slider.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

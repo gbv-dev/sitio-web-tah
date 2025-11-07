@@ -1,0 +1,116 @@
+{
+  "brand": "Andes Suite",
+  "contact": {
+    "address": "Ebro 2799, Las Condes. Santiago de Chile",
+    "email": "andessuite@andessuite.cl",
+    "phone": "+562 22320627",
+    "bookingLink": "mailto:andessuite@andessuite.cl"
+  },
+  "seo": {
+    "home": {
+      "title": "Andes Suite Home",
+      "description": "Alojamiento en Las Condes"
+    },
+    "rooms": {
+      "title": "Piezas y Alojamiento — Andes Suite",
+      "description": "Habitaciones cómodas, Servicios completos y excelente ubicación."
+    }
+  },
+  "heroSlides": [
+    {
+      "src": "assets/img/hero1.jpg",
+      "alt": "Ubicación Central"
+    },
+    {
+      "src": "assets/img/hero2.jpg",
+      "alt": "Barrilo amigable"
+    },
+    {
+      "src": "assets/img/hero3.jpg",
+      "alt": "Terraza y locación acomodada"
+    }
+  ],
+  "sections": {
+    "location": {
+      "title": "Locación",
+      "text": "Ubicado en el corazón de Las Condes, cerca de centros comerciales, parques y transporte público.",
+      "images": [
+        { "src": "assets/img/locacion1.jpg", "alt": "Vista del entorno 1" },
+        { "src": "assets/img/locacion2.jpg", "alt": "Vista del entorno 2" },
+        { "src": "assets/img/locacion3.jpg", "alt": "Vista del entorno 3" }
+      ]
+    },
+    "amenities": {
+      "title": "Comodidades",
+      "text": "Wi-Fi rápido, estacionamiento, áreas comunes y desayuno opcional.",
+      "images": [
+        { "src": "assets/img/amenidades1.jpg", "alt": "Amenidades 1" },
+        { "src": "assets/img/amenidades2.jpg", "alt": "Amenidades 2" },
+        { "src": "assets/img/amenidades3.jpg", "alt": "Amenidades 3" }
+      ]
+    },
+    "around": {
+      "title": "Alrededores",
+      "text": "Restaurantes, cafés, miradores y vida nocturna a minutos.",
+      "images": [
+        { "src": "assets/img/alrededores1.jpg", "alt": "Alrededores 1" },
+        { "src": "assets/img/alrededores2.jpeg", "alt": "Alrededores 2" },
+        { "src": "assets/img/alrededores3.jpeg", "alt": "Alrededores 3" }
+      ]
+    }
+  },
+  "footer": {
+    "locationImage": {
+      "src": "assets/img/footer-locacion.jpg",
+      "alt": "Foto de la locación en el footer"
+    }
+  },
+  "rooms": [
+    {
+      "name": "Pieza Matrimonial Vista Mar",
+      "shortDescription": "Amplia, luminosa y con balcón.",
+      "features": ["Baño privado", "Smart TV", "Calefacción"],
+      "capacity": 2,
+      "bedSetup": "1 cama king",
+      "priceFrom": "$75.000 / noche",
+      "cta": "mailto:reservas@costaazul.cl",
+      "cover": {
+        "src": "assets/img/matrimonial-cover.svg",
+        "alt": "Pieza matrimonial con vista al mar"
+      },
+      "gallery": [
+        {
+          "src": "assets/img/matrimonial1.svg",
+          "alt": "Dormitorio 1"
+        },
+        {
+          "src": "assets/img/matrimonial2.svg",
+          "alt": "Dormitorio 2"
+        }
+      ]
+    },
+    {
+      "name": "Pieza Doble Estándar",
+      "shortDescription": "Comodidad y funcionalidad.",
+      "features": ["Baño compartido", "Wi-Fi", "Closet"],
+      "capacity": 2,
+      "bedSetup": "2 camas individuales",
+      "priceFrom": "$48.000 / noche",
+      "cta": "mailto:reservas@costaazul.cl",
+      "cover": {
+        "src": "assets/img/doble-cover.svg",
+        "alt": "Pieza doble estándar"
+      },
+      "gallery": [
+        {
+          "src": "assets/img/doble1.svg",
+          "alt": "Dormitorio doble 1"
+        },
+        {
+          "src": "assets/img/doble2.svg",
+          "alt": "Dormitorio doble 2"
+        }
+      ]
+    }
+  ]
+}

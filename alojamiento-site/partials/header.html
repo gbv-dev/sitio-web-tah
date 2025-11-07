@@ -1,0 +1,46 @@
+<header class="bg-white shadow-md fixed top-0 w-full z-50">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo/Brand -->
+      <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+        <img src="assets/img/logo.png" alt="Andes Suite" class="h-12 w-auto" id="header-logo">
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 items-center">
+        <li><a href="index.html" class="nav-link text-gray-700 hover:text-black transition-colors font-medium" data-page="index">Inicio</a></li>
+        <li><a href="piezas.html" class="nav-link text-gray-700 hover:text-black transition-colors font-medium" data-page="piezas">Piezas</a></li>
+        <li><a href="#contacto" class="text-gray-700 hover:text-black transition-colors font-medium">Contacto</a></li>
+        <li>
+          <a id="header-booking-link" href="mailto:reservas@example.com" class="bg-black hover:bg-white hover:text-black hover:shadow-lg text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+            Reservar
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-black rounded" aria-label="Abrir menú" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <ul class="flex flex-col space-y-4">
+        <li><a href="index.html" class="nav-link block text-gray-700 hover:text-black transition-colors font-medium" data-page="index">Inicio</a></li>
+        <li><a href="piezas.html" class="nav-link block text-gray-700 hover:text-black transition-colors font-medium" data-page="piezas">Piezas</a></li>
+        <li><a href="#contacto" class="block text-gray-700 hover:text-black transition-colors font-medium">Contacto</a></li>
+        <li>
+          <a id="header-booking-link-mobile" href="mailto:reservas@example.com" class="block bg-black hover:bg-white hover:text-black hover:shadow-lg text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 text-center">
+            Reservar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-20"></div>

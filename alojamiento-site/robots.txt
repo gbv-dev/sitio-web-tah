@@ -1,0 +1,14 @@
+# robots.txt for Alojamiento Site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.andessuite.cl/sitemap.xml
+
+# Disallow admin or private directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow search engines to crawl images
+Allow: /assets/img/

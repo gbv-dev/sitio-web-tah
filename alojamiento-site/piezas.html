@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Habitaciones cómodas, amenidades completas y excelente ubicación.">
+  <title>Piezas y Alojamiento — Costa Azul</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-gray-50">
+  
+  <!-- Header will be injected here -->
+  <div id="header-container"></div>
+
+  <!-- Banner with Image and Fade to White -->
+  <section class="relative h-[50vh] overflow-hidden">
+    <!-- Background Image -->
+    <img src="assets/img/piezas1.jpg" alt="Banner Piezas" class="absolute inset-0 w-full h-full object-cover">
+    
+    <!-- Gradient Fade to White (bottom) -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-white"></div>
+    
+    <!-- Content -->
+    <div class="relative h-full flex items-center justify-center z-10">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">Nuestros Alojamientos</h1>
+        <p class="text-xl text-white drop-shadow-lg">Encuentra la pieza perfecta para tu estadía</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms Grid Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div id="rooms-grid" class="grid md:grid-cols-2 gap-8">
+      <!-- Rooms will be injected by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+    <button id="close-lightbox" 
+            class="absolute top-4 right-4 text-white hover:text-gray-300 text-4xl font-bold focus:outline-none focus:ring-2 focus:ring-white rounded"
+            aria-label="Cerrar galería">
+      ×
+    </button>
+    
+    <button id="prev-lightbox" 
+            class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 text-6xl font-bold focus:outline-none focus:ring-2 focus:ring-white rounded"
+            aria-label="Imagen anterior">
+      ‹
+    </button>
+    
+    <button id="next-lightbox" 
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 text-6xl font-bold focus:outline-none focus:ring-2 focus:ring-white rounded"
+            aria-label="Siguiente imagen">
+      ›
+    </button>
+    
+    <div class="max-w-5xl w-full">
+      <img id="lightbox-image" src="" alt="" class="w-full h-auto max-h-[80vh] object-contain">
+      <p id="lightbox-caption" class="text-white text-center mt-4 text-lg"></p>
+      <div id="lightbox-counter" class="text-white text-center mt-2"></div>
+    </div>
+  </div>
+
+  <!-- Contact CTA -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">¿Tienes alguna pregunta?</h2>
+      <p class="text-xl text-gray-600 mb-8">Contáctanos para más información o reservas</p>
+      <a href="#contacto" class="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors inline-block">
+        Ir a Contacto
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer will be injected here -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/header-footer.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Load and render rooms
+    async function loadRooms() {
+      try {
+        const response = await fetch('data/site.json');
+        const data = await response.json();
+        const roomsGrid = document.getElementById('rooms-grid');
+        
+        data.rooms.forEach((room, index) => {
+          const roomCard = document.createElement('div');
+          roomCard.className = 'bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow';
+          roomCard.innerHTML = `
+            <div class="relative h-64 overflow-hidden group cursor-pointer" data-room-index="${index}">
+              <img src="${room.cover.src}" 
+                   alt="${room.cover.alt}" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                <span class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                  <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">${room.name}</h3>
+              <p class="text-gray-600 mb-4">${room.shortDescription}</p>
+              
+              <div class="space-y-2 mb-4">
+                <div class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  </svg>
+                  <span>Capacidad: ${room.capacity} persona${room.capacity > 1 ? 's' : ''}</span>
+                </div>
+                <div class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                  </svg>
+                  <span>${room.bedSetup}</span>
+                </div>
+              </div>
+              
+              <div class="mb-4">
+                <h4 class="font-semibold text-gray-800 mb-2">Características:</h4>
+                <ul class="grid grid-cols-1 gap-2">
+                  ${room.features.map(feature => `
+                    <li class="flex items-center text-gray-600">
+                      <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      ${feature}
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+              
+              <div class="flex items-center justify-between border-t pt-4">
+                <div>
+                  <span class="text-gray-600 text-sm">Desde</span>
+                  <p class="text-2xl font-bold text-black">${room.priceFrom}</p>
+                </div>
+                <a href="${room.cta}" class="bg-black hover:bg-gray-800 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                  Reservar
+                </a>
+              </div>
+            </div>
+          `;
+          roomsGrid.appendChild(roomCard);
+        });
+
+        // Setup lightbox for room images
+        setupLightbox(data.rooms);
+        
+      } catch (error) {
+        console.error('Error loading rooms:', error);
+      }
+    }
+
+    // Lightbox functionality
+    function setupLightbox(rooms) {
+      const modal = document.getElementById('lightbox-modal');
+      const lightboxImage = document.getElementById('lightbox-image');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const lightboxCounter = document.getElementById('lightbox-counter');
+      const closeBtn = document.getElementById('close-lightbox');
+      const prevBtn = document.getElementById('prev-lightbox');
+      const nextBtn = document.getElementById('next-lightbox');
+      
+      let currentRoom = null;
+      let currentIndex = 0;
+      
+      // Open lightbox when clicking on room image
+      document.addEventListener('click', (e) => {
+        const roomImage = e.target.closest('[data-room-index]');
+        if (roomImage) {
+          const roomIndex = parseInt(roomImage.dataset.roomIndex);
+          currentRoom = rooms[roomIndex];
+          currentIndex = 0;
+          showLightboxImage();
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+      
+      function showLightboxImage() {
+        if (currentRoom && currentRoom.gallery[currentIndex]) {
+          const image = currentRoom.gallery[currentIndex];
+          lightboxImage.src = image.src;
+          lightboxImage.alt = image.alt;
+          lightboxCaption.textContent = image.alt;
+          lightboxCounter.textContent = `${currentIndex + 1} / ${currentRoom.gallery.length}`;
+        }
+      }
+      
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+      
+      prevBtn.addEventListener('click', () => {
+        if (currentRoom) {
+          currentIndex = (currentIndex - 1 + currentRoom.gallery.length) % currentRoom.gallery.length;
+          showLightboxImage();
+        }
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        if (currentRoom) {
+          currentIndex = (currentIndex + 1) % currentRoom.gallery.length;
+          showLightboxImage();
+        }
+      });
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('hidden')) {
+          if (e.key === 'Escape') closeBtn.click();
+          if (e.key === 'ArrowLeft') prevBtn.click();
+          if (e.key === 'ArrowRight') nextBtn.click();
+        }
+      });
+      
+      // Close on background click
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeBtn.click();
+      });
+    }
+
+    // Initialize
+    loadRooms();
+  </script>
+</body>
+</html>

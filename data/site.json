@@ -18,13 +18,13 @@
   },
   "heroSlides": [
     {
-      "src": "assets/img/hero1.jpg",
+      "src": "assets/img/hero2.jpg",
       "alt": "Bienvenidos a Andes Suite",
       "title": "Bienvenidos a Andes Suite",
       "subtitle": "Confort, ubicación y tranquilidad"
     },
     {
-      "src": "assets/img/hero2.jpg",
+      "src": "assets/img/hero1.jpg",
       "alt": "Ubicación privilegiada",
       "title": "Ubicación privilegiada",
       "subtitle": "Tú segunda casa en Santiago"
@@ -108,7 +108,7 @@
       "features": ["1 Dormitorios", "1 Baño", "Terraza", "Cocina"],
       "capacity": 2,
       "bedSetup": "1 cama de dos plazas",
-      "cta": "mailto:reservas@costaazul.cl",
+      "cta": "mailto:andessuite@andessuite.cl",
       "cover": {
         "src": "assets/img/piesa 3 foto 1.jpg",
         "alt": "Pieza doble estándar"
@@ -138,7 +138,7 @@
       "features": ["2 Dormitorios", "1 Baño", "Terraza"],
       "capacity": 2,
       "bedSetup": "1 cama de dos plazas",
-      "cta": "mailto:reservas@costaazul.cl",
+      "cta": "mailto:andessuite@andessuite.cl",
       "cover": {
         "src": "assets/img/piesa 2 foto 1.jpg",
         "alt": "Suite ejecutiva"

@@ -19,27 +19,25 @@
   "heroSlides": [
     {
       "src": "assets/img/hero1.jpg",
-      "alt": "Ubicación Central",
-      "title": "Ubicación Privilegiada",
-      "subtitle": "En el corazón de Las Condes"
+      "alt": "Bienvenidos a Andes Suite",
+      "title": "Confort, ubicación y tranquilidad"
     },
     {
       "src": "assets/img/hero2.jpg",
-      "alt": "Barrilo amigable",
-      "title": "Ambiente Acogedor",
-      "subtitle": "Tu segunda casa en Santiago"
+      "alt": "Ubicación privilegiada",
+      "title": "Tú segunda casa en Santiago"
     },
     {
       "src": "assets/img/hero3.jpg",
-      "alt": "Terraza y locación acomodada",
+      "alt": "Cercano a lugares de interés",
       "title": "Espacios Modernos",
       "subtitle": "Comodidad y estilo para tu estadía"
     }
   ],
   "sections": {
     "location": {
-      "title": "Locación",
-      "text": "Ubicado en el corazón de Las Condes, cerca de centros comerciales, parques y transporte público.",
+      "title": "Locación insuperable",
+      "text": "Ubicación privilegiada donde confluyen tres comunas del sector oriente: Las Condes, Vitacura y Providencia. A dos cuadras del Mut, zona de restaurantes y bares de Isidora Goyenechea y el metro estación Tobalaba línea 1.",
       "images": [
         { "src": "assets/img/locacion1.jpg", "alt": "Vista del entorno 1" },
         { "src": "assets/img/locacion2.jpg", "alt": "Vista del entorno 2" },
@@ -47,8 +45,8 @@
       ]
     },
     "amenities": {
-      "title": "Comodidades",
-      "text": "Wi-Fi rápido, estacionamiento, áreas comunes y desayuno opcional.",
+      "title": "Comodidades a disposición",
+      "text": "Contamos con disponibilidad de parking, departamentos con 1 dormitorio y 1 baño y dormitorios con 2 dormitorio y 2 baños. Amplios departamentos amoblados. Recepción personalizada en el primer piso del edificio. Banda ancha. Kit de  desayuno. Servicio de sábanas y toallas impecables.",
       "images": [
         { "src": "assets/img/amenidades1.jpg", "alt": "Amenidades 1" },
         { "src": "assets/img/amenidades2.jpg", "alt": "Amenidades 2" },
@@ -56,8 +54,8 @@
       ]
     },
     "around": {
-      "title": "Alrededores",
-      "text": "Restaurantes, cafés, miradores y vida nocturna a minutos.",
+      "title": "Alrededores privilegiados y vida nocturna",
+      "text": "Nuestros alrededores cuentan con grandes parques con naturaleza para salir a caminar durante el día y con selectos y variados restaurantes, cafeterías, heladerías y bares para disfrutar la vida nocturna.",
       "images": [
         { "src": "assets/img/alrededores1.jpg", "alt": "Alrededores 1" },
         { "src": "assets/img/alrededores2.jpeg", "alt": "Alrededores 2" },

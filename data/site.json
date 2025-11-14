@@ -20,12 +20,14 @@
     {
       "src": "assets/img/hero1.jpg",
       "alt": "Bienvenidos a Andes Suite",
-      "title": "Confort, ubicación y tranquilidad"
+      "title": "Bienvenidos a Andes Suite",
+      "subtitle": "Confort, ubicación y tranquilidad"
     },
     {
       "src": "assets/img/hero2.jpg",
       "alt": "Ubicación privilegiada",
-      "title": "Tú segunda casa en Santiago"
+      "title": "Ubicación privilegiada",
+      "subtitle": "Tú segunda casa en Santiago"
     },
     {
       "src": "assets/img/hero3.jpg",
@@ -71,71 +73,92 @@
   },
   "rooms": [
     {
-      "name": "Pieza Matrimonial Vista Mar",
+      "name": "Pieza Doble",
       "shortDescription": "Amplia, luminosa y con balcón.",
-      "features": ["Baño privado", "Smart TV", "Calefacción"],
-      "capacity": 2,
-      "bedSetup": "1 cama king",
-      "priceFrom": "$75.000 / noche",
-      "cta": "mailto:reservas@costaazul.cl",
+      "features": ["2 Dormitorios", "1 Baño", "Terraza"],
+      "capacity": 3,
+      "bedSetup": "1 cama de dos plazas + 1 cama simple",
+      "cta": "mailto:andessuite@andessuite.cl",
       "cover": {
-        "src": "assets/img/matrimonial-cover.svg",
-        "alt": "Pieza matrimonial con vista al mar"
+        "src": "assets/img/pieza 1 foto 1.jpg",
+        "alt": "Pieza Doble"
       },
       "gallery": [
         {
-          "src": "assets/img/matrimonial1.svg",
+          "src": "assets/img/pieza 1 foto 1.jpg",
           "alt": "Dormitorio 1"
         },
         {
-          "src": "assets/img/matrimonial2.svg",
+          "src": "assets/img/pieza 1 foto 2.jpg",
           "alt": "Dormitorio 2"
+        },
+        {
+          "src": "assets/img/pieza 1 foto 3.jpg",
+          "alt": "Dormitorio 3"
+        },
+        {
+          "src": "assets/img/pieza 1 foto 4.jpg",
+          "alt": "Dormitorio 4"
         }
       ]
     },
     {
-      "name": "Pieza Doble Estándar",
+      "name": "Pieza con cocina",
       "shortDescription": "Comodidad y funcionalidad.",
-      "features": ["Baño compartido", "Wi-Fi", "Closet"],
+      "features": ["1 Dormitorios", "1 Baño", "Terraza", "Cocina"],
       "capacity": 2,
-      "bedSetup": "2 camas individuales",
-      "priceFrom": "$48.000 / noche",
+      "bedSetup": "1 cama de dos plazas",
       "cta": "mailto:reservas@costaazul.cl",
       "cover": {
-        "src": "assets/img/doble-cover.svg",
+        "src": "assets/img/piesa 3 foto 1.jpg",
         "alt": "Pieza doble estándar"
       },
       "gallery": [
         {
-          "src": "assets/img/doble1.svg",
+          "src": "assets/img/piesa 3 foto 1.jpg",
           "alt": "Dormitorio doble 1"
         },
         {
-          "src": "assets/img/doble2.svg",
+          "src": "assets/img/piesa 3 foto 2.jpg",
           "alt": "Dormitorio doble 2"
+        },
+        {
+          "src": "assets/img/piesa 3 foto 3.jpg",
+          "alt": "Dormitorio doble 3"
+        },
+        {
+          "src": "assets/img/piesa 3 foto 4.jpg",
+          "alt": "Dormitorio doble 4"
         }
       ]
     },
     {
-      "name": "Suite Ejecutiva",
+      "name": "Pieza Simple",
       "shortDescription": "Espaciosa y elegante, ideal para estancias prolongadas.",
-      "features": ["Baño privado", "Cocina equipada", "Smart TV", "Escritorio"],
-      "capacity": 3,
-      "bedSetup": "1 cama queen + sofá cama",
-      "priceFrom": "$95.000 / noche",
+      "features": ["2 Dormitorios", "1 Baño", "Terraza"],
+      "capacity": 2,
+      "bedSetup": "1 cama de dos plazas",
       "cta": "mailto:reservas@costaazul.cl",
       "cover": {
-        "src": "assets/img/matrimonial-cover.svg",
+        "src": "assets/img/piesa 2 foto 1.jpg",
         "alt": "Suite ejecutiva"
       },
       "gallery": [
         {
-          "src": "assets/img/matrimonial1.svg",
+          "src": "assets/img/piesa 2 foto 1.jpg",
           "alt": "Suite ejecutiva 1"
         },
         {
-          "src": "assets/img/matrimonial2.svg",
+          "src": "assets/img/piesa 2 foto 2.jpg",
           "alt": "Suite ejecutiva 2"
+        },
+        {
+          "src": "assets/img/piesa 2 foto 3.jpg",
+          "alt": "Suite ejecutiva 3"
+        },
+        {
+          "src": "assets/img/piesa 2 foto 4.jpg",
+          "alt": "Suite ejecutiva 4"
         }
       ]
     }
